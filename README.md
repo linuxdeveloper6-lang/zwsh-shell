@@ -1,4 +1,6 @@
 # ZWSH
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/linuxdeveloper6-lang/zrtxt)](https://github.com/linuxdeveloper6-lang/zwsh-shell/releases)
 ## What is ZWSH?
 **ZWSH**(**Zero Weight SHell**) is a **lightweight** Linux shell.
 ## Configuration
