@@ -40,6 +40,7 @@ cd zwsh-shell
 ```bash
 make
 sudo make install #installing
+sudo make remove #removing
 ```
 ## LICENSE
 **See** ![LICENSE](LICENSE)
