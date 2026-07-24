@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <signal.h>
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -9,12 +10,14 @@
 void print(const char *txt) { write(1, txt, strlen(txt)); }
 void printred(const char *txt) { print("\033[31m"); print(txt); print("\033[0m"); }
 void printgreen(const char *txt) { print("\033[32m"); print(txt); print("\033[0m"); }
+void sigint_func() {} // dont close after sigint
 int main() {
 	char *token;
 	while(1) {
+		signal(SIGINT, sigint_func);
 		char *prompt = getenv("ZWSH_PROMPT");
 		if (!prompt) {
-			prompt = "zwsh-1.0.0$ ";
+			prompt = "zwsh-1.1.0$ ";
 		}
 		char *input = readline(prompt);
 		add_history(input);
@@ -43,6 +46,9 @@ int main() {
 			if (arg == NULL) {
 				arg = home;
 			}
+			else if (strcmp(arg, "~") == 0) {
+				arg = home;
+			}
             if (chdir(arg) == 0) {
 			}
 			else {
@@ -66,6 +72,26 @@ int main() {
 				printf("%s\n", entry->d_name);
 			}
 			closedir(dir);
+		}
+		else if (strcmp(token, "pwd") == 0) {
+			char cwd[1024];
+			if (getcwd(cwd, sizeof(cwd)) != NULL) {
+				print(cwd);
+				print("\n");
+			}
+			else {
+				perror("pwd");
+			}
+		}
+		else if (strcmp(token, "help") == 0) {
+			print("zwsh built-in commands:\n");
+			print("pwd\n");
+			print("cat\n");
+			print("exit\n");
+			print("clear\n");
+			print("ls\n");
+			print("cd\n");
+			print("echo\n");
 		}
 		else if (strcmp(token, "cat") == 0) {
 			char *arg = strtok(NULL, " ");
