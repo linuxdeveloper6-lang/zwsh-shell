@@ -10,3 +10,5 @@ clean:
 	rm -rf $(OUTPUT)
 install:
 	cp $(OUTPUT) /bin/
+remove:
+	rm /bin/$(OUTPUT)

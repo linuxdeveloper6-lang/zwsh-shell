@@ -1,8 +1,9 @@
 # ZWSH
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/linuxdeveloper6-lang/zwsh-shell)](https://github.com/linuxdeveloper6-lang/zwsh-shell/releases)
+![Commits](https://img.shields.io/github/commit-activity/m/linuxdeveloper6-lang/zwsh-shell)
 ## What is ZWSH?
-**ZWSH**(**Zero Weight SHell**) is a **lightweight** Linux shell.
+**ZWSH (Zero Weight SHell)** is a **lightweight** Linux shell.
 ## Configuration
 You can customize the prompt by setting the `ZWSH_PROMPT` environment variable:
 ```bash
@@ -22,7 +23,7 @@ echo
 clear
 exit
 ```
-Starts the ZWSH-integrated utils
+**Starts the ZWSH-built-in utils**
 ## Building from source
 ### Requirements
 - GCC or Clang
@@ -40,3 +41,5 @@ cd zwsh-shell
 make
 sudo make install #installing
 ```
+## LICENSE
+**See** ![LICENSE](LICENSE)
