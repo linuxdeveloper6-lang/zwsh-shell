@@ -2,6 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/linuxdeveloper6-lang/zwsh-shell)](https://github.com/linuxdeveloper6-lang/zwsh-shell/releases)
 ![Commits](https://img.shields.io/github/commit-activity/m/linuxdeveloper6-lang/zwsh-shell)
+[![Build ZWSH](https://github.com/linuxdeveloper6-lang/zwsh-shell/actions/workflows/build.yml/badge.svg)](https://github.com/linuxdeveloper6-lang/zwsh-shell/actions/workflows/build.yml)
 ## What is ZWSH?
 **ZWSH (Zero Weight SHell)** is a **lightweight** Linux shell.
 ## Configuration
